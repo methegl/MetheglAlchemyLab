@@ -3,98 +3,314 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>メセグル錬金工房</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #0a0a0a;
-      color: #f5f5f5;
-    }
+  <title>methegl錬金工房 | Portfolio</title>
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    h1 {
-      color: gold;
-    }
-
-    .grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .card {
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 16px;
-      padding: 16px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: gold;
-    }
-
-    .links a {
-      display: block;
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #333;
-      border-radius: 10px;
-      text-decoration: none;
-      color: #fff;
-    }
-
-    .links a:hover {
-      border-color: gold;
-      color: gold;
-    }
-  </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="container">
-  <h1>メセグル錬金工房</h1>
-  <p>個人開発・受託制作・配信活動のまとめページ</p>
-
-  <h2>🧪 実績</h2>
-  <div class="grid grid-3">
-    <div class="card">
-      <h3>JQG</h3>
-      <p>FF14ジョブ早見ガイド</p>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand">Methegl Alchemy Lab</div>
+      <nav class="nav">
+        <a href="#top">Top</a>
+        <a href="#works">Works</a>
+        <a href="#about">About me</a>
+        <a href="#links">Links</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="card">
-      <h3>Daily Quest</h3>
-      <p>日常タスク管理アプリ</p>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Top</span>
+          <h1>methegl錬金工房</h1>
+          <p class="hero-lead">
+            個人開発、受託Web制作、イラスト制作、配信活動をまとめたポートフォリオサイト。
+            「何を作っているか」「どんな形で届けられるか」を、研究室の記録のように整理して見せる場所です。
+          </p>
+          <p class="hero-message">
+            観察して、作って、試して、育てる。<br>
+            制作は実験であり、積み重ねであり、少しずつ形になっていく研究の記録。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#works">Worksを見る</a>
+            <a class="button" href="#about">About me</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div>
+            <span class="eyebrow">Logo</span>
+            <div class="logo-box">
+              <div>
+                <strong>LOGO COMING SOON</strong><br>
+                methegl錬金工房の看板が完成後、ここに掲載
+              </div>
+            </div>
+          </div>
+          <p>
+            ギネスのロゴを制作してくれた方に、メセグル錬金工房のロゴも依頼中。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="works">
+      <div class="container works-stack">
+        <div class="section-panel">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Works</span>
+              <h2>Personal Tools</h2>
+              <p>公開中の個人開発ツールと、制作途中のものをまとめて掲載</p>
+            </div>
+          </div>
+
+          <div class="tool-grid">
+            <article class="work-card">
+              <span class="work-type">公開中</span>
+              <h3>JQG ▶ Job Quick Guide</h3>
+              <p>
+                FF14のジョブスキルをレベル帯ごとに確認できるWebツール。
+                レベルシンク時のスキル確認や、軽減・バフ確認をすばやく行えるように制作。
+              </p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">GitHub Pages</span>
+              </div>
+              <div class="card-links">
+                <a class="text-link" href="https://methegl.github.io/Job-Quick-Guide/" target="_blank" rel="noopener noreferrer">公開ページを見る ↗</a>
+                <a class="text-link" href="jqg.html">詳細を見る ↗</a>
+              </div>
+            </article>
+
+            <article class="work-card">
+              <span class="work-type">制作途中</span>
+              <h3>デイリークエストアプリ</h3>
+              <p>
+                日常タスクをクエスト化して管理する自己管理アプリ。
+                ログやレベルアップ要素を組み込みながら制作していたが、現在はJQGに集中するため一旦停止中。
+              </p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">構想整理中</span>
+              </div>
+              <div class="card-links">
+                <a class="text-link" href="https://methegl.github.io/daily-quest-app/" target="_blank" rel="noopener noreferrer">試作ページを見る ↗</a>
+                <a class="text-link" href="daily-quest.html">詳細を見る ↗</a>
+              </div>
+              <p class="status-note">※ ポートフォリオ上では「制作途中作品」として掲載</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="section-panel">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Works</span>
+              <h2>Web Works</h2>
+              <p>最新の2〜3件だけトップに出して、一覧や詳細に繋ぐ構成</p>
+            </div>
+            <a class="more-link" href="web-works.html">MORE ↗</a>
+          </div>
+
+          <div class="work-grid">
+            <article class="work-card">
+              <span class="work-type">受託制作</span>
+              <h3>あわら市防災士の会 申し込みフォーム</h3>
+              <p>
+                Google Apps Script と Google Sheets を使い、イベント申し込み受付と管理ができる仕組みを制作。
+              </p>
+              <div class="tags">
+                <span class="tag">GAS</span>
+                <span class="tag">Google Sheets</span>
+                <span class="tag">フォーム運用</span>
+              </div>
+              <div class="card-links">
+                <a class="text-link" href="awara-bousai.html">詳細を見る ↗</a>
+              </div>
+            </article>
+
+            <article class="work-card">
+              <span class="work-type">掲載予定</span>
+              <h3>Web Works 02</h3>
+              <p>
+                今後ここに、直近のWeb制作実績を追加予定。トップは見やすさを優先して代表例のみ掲載。
+              </p>
+              <div class="tags">
+                <span class="tag">coming soon</span>
+              </div>
+            </article>
+
+            <article class="work-card">
+              <span class="work-type">掲載予定</span>
+              <h3>Web Works 03</h3>
+              <p>
+                GAS、静的サイト、申し込みフォーム、運用寄りの制作物などを今後追加していく枠。
+              </p>
+              <div class="tags">
+                <span class="tag">coming soon</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="section-panel">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Works</span>
+              <h2>Illustration Works</h2>
+              <p>SDイラストなどを2〜3件だけ見せて、ギャラリーページへ送る構成</p>
+            </div>
+            <a class="more-link" href="illustration-works.html">MORE ↗</a>
+          </div>
+
+          <div class="work-grid">
+            <article class="work-card">
+              <span class="work-type">SDイラスト</span>
+              <h3>SD Gallery 01</h3>
+              <p>
+                ここにSDイラストのサムネイルやサンプル画像を入れる想定。完成後は画像付きカードに差し替え可能。
+              </p>
+              <div class="tags">
+                <span class="tag">SD</span>
+                <span class="tag">Sample</span>
+              </div>
+            </article>
+
+            <article class="work-card">
+              <span class="work-type">SDイラスト</span>
+              <h3>SD Gallery 02</h3>
+              <p>
+                依頼で描いた作品やサンプル立ち絵を並べる枠。まずは2〜3件だけ置くとトップがすっきり見える。
+              </p>
+              <div class="tags">
+                <span class="tag">Commission</span>
+              </div>
+            </article>
+
+            <article class="work-card">
+              <span class="work-type">Gallery Link</span>
+              <h3>イラスト一覧ページへ</h3>
+              <p>
+                イラストは枚数が増えやすいので、トップは代表例だけにして、一覧ページでしっかり見せる構成がおすすめ。
+              </p>
+              <div class="card-links">
+                <a class="text-link" href="illustration-works.html">一覧を見る ↗</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-panel">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">About me</span>
+              <h2>作っているものと、できること</h2>
+              <p>活動内容、使うツール、ポートフォリオ全体の方向性をまとめた欄</p>
+            </div>
+          </div>
+
+          <div class="about-grid">
+            <article class="about-card">
+              <h3>ギネス・ノワール / methegl</h3>
+              <p>
+                配信・創作・個人開発を行う、メセグル錬金工房の運営者。
+                Webツール、フォーム制作、イラスト制作などを通して、「使いやすさ」と「世界観」の両立を目指している。
+              </p>
+              <div class="skill-list">
+                <span class="skill-pill">個人開発</span>
+                <span class="skill-pill">Web制作</span>
+                <span class="skill-pill">イラスト制作</span>
+                <span class="skill-pill">配信活動</span>
+              </div>
+            </article>
+
+            <article class="about-card">
+              <h3>使用ツール / スキル</h3>
+              <div class="skill-list">
+                <span class="skill-pill">HTML</span>
+                <span class="skill-pill">CSS</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">Google Apps Script</span>
+                <span class="skill-pill">GitHub</span>
+                <span class="skill-pill">GitHub Pages</span>
+                <span class="skill-pill">Google Sheets</span>
+                <span class="skill-pill">Clip Studio Paint</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="footer-grid" style="margin-top: 18px;">
+            <article class="about-card">
+              <h3>作れるもの</h3>
+              <ul>
+                <li>静的Webページ</li>
+                <li>申し込みフォーム / 管理導線</li>
+                <li>個人開発ツールのUI設計・実装</li>
+                <li>SDイラスト / 立ち絵系制作</li>
+              </ul>
+            </article>
+
+            <article class="cta-box">
+              <h3>このサイトの役割</h3>
+              <p>
+                リットリンクのような導線ページでありつつ、代表作・人となり・できることも見せる、
+                「ガチポートフォリオ」の入口として育てていく想定です。
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="links">
+      <div class="container">
+        <div class="section-panel">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Links</span>
+              <h2>活動リンク</h2>
+              <p>X / Twitch / YouTube への導線。必要なら今後ご依頼導線も追加可能。</p>
+            </div>
+          </div>
+
+          <div class="links-grid">
+            <a class="link-card" href="https://x.com/Guinness_Noir" target="_blank" rel="noopener noreferrer">
+              <h3>X</h3>
+              <p>配信・創作・開発の更新、告知、進捗まとめ。</p>
+            </a>
+
+            <a class="link-card" href="#" target="_blank" rel="noopener noreferrer">
+              <h3>Twitch</h3>
+              <p>ゲーム配信や活動のメイン導線。リンク差し替え待ち。</p>
+            </a>
+
+            <a class="link-card" href="#" target="_blank" rel="noopener noreferrer">
+              <h3>YouTube</h3>
+              <p>アーカイブ、動画、切り抜き置き場として育てる予定。リンク差し替え待ち。</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>brewed in methegl ⚗️</p>
+      <p>メセグル錬金工房 Portfolio Portal</p>
     </div>
-
-    <div class="card">
-      <h3>GAS 申し込みフォーム</h3>
-      <p>イベント管理システム</p>
-    </div>
-  </div>
-
-  <h2>🔧 使用ツール</h2>
-  <div class="card">
-    HTML / CSS / JavaScript / GAS / GitHub
-  </div>
-
-  <h2>🔗 リンク</h2>
-  <div class="links">
-    <a href="https://x.com/Guinness_Noir" target="_blank">X（Twitter）</a>
-    <a href="https://methegl.github.io/Job-Quick-Guide/" target="_blank">JQG</a>
-  </div>
-
-</div>
-
+  </footer>
 </body>
 </html>
