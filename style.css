@@ -142,6 +142,15 @@
       line-height: 1.08;
       letter-spacing: 0.01em;
     }
+    
+    .work-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.work-card h3 a:hover {
+  text-decoration: underline;
+}
 
     .hero-lead {
       margin: 18px 0 0;
