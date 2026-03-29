@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>methegl錬金工房 | Portfolio</title>
+  <title>メセグル錬金工房 | Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="site-header-inner">
-      <div class="brand">Methegl Alchemy Lab</div>
+      <div class="brand"><img src="MAL_Logo/Methegl_logo_line_200.png" alt="メセグル錬金工房ロゴ"></div>
       <nav class="nav">
         <a href="#top">Top</a>
-        <a href="#works">Works</a>
+        <a href="#alchemy">Alchemy Projects</a>
+        <a href="#web-works">Web Works</a>
+        <a href="#illustration-works">Illustration</a>
         <a href="#about">About me</a>
         <a href="#links">Links</a>
-      </nav>
+    </nav>
     </div>
   </header>
 
@@ -25,7 +27,7 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">Top</span>
-          <h1>methegl錬金工房</h1>
+          <h1>メセグル錬金工房</h1>
           <p class="hero-lead">
             個人開発、受託Web制作、イラスト制作、配信活動をまとめたポートフォリオサイト。
             「何を作っているか」「どんな形で届けられるか」を、研究室の記録のように整理して見せる場所です。
@@ -35,36 +37,43 @@
             制作は実験であり、積み重ねであり、少しずつ形になっていく研究の記録。
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#works">Worksを見る</a>
-            <a class="button" href="#about">About me</a>
+            <a class="button primary" href="#alchemy">Alchemy Projectsへ</a>
+
+            <div class="sub-buttons">
+              <a class="button" href="#web-works">Web Works</a>
+              <a class="button" href="#illustration-works">Illustration</a>
+              <a class="button" href="#about">About me</a>
+              <a class="button" href="#links">Links</a>
+            </div>
           </div>
         </div>
 
         <div class="hero-visual">
-          <div>
+          <div class="logo-area">
             <span class="eyebrow">Logo</span>
+
             <div class="logo-box">
-              <div>
-                <strong>LOGO COMING SOON</strong><br>
-                methegl錬金工房の看板が完成後、ここに掲載
-              </div>
+              <img src="MAL_Logo/Methegl_logo.png" alt="メセグル錬金工房ロゴ" class="main-logo">
             </div>
-          </div>
-          <p>
-            ギネスのロゴを制作してくれた方に、メセグル錬金工房のロゴも依頼中。
+
+          <p class="logo-credit">
+            ロゴ制作：
+            <a href="https://skima.jp/profile?id=476063&sh=kN5Xgiq" target="_blank">
+              緑豆いんげん様
+            </a>
           </p>
         </div>
       </div>
     </section>
 
-    <section id="works">
-      <div class="container works-stack">
+    <section id="alchemy">
+      <section class="container works-stack">
         <div class="section-panel">
           <div class="section-head">
             <div>
-              <span class="eyebrow">Works</span>
-              <h2>Personal Tools</h2>
-              <p>公開中の個人開発ツールと、制作途中のものをまとめて掲載</p>
+              <span class="eyebrow">Alchemy Projects（研究・実験・個人開発）</span>
+              <h2>Alchemy Projects</h2>
+              <p>観察・実験・試作を繰り返して生まれた、個人開発の研究成果。</p>
             </div>
           </div>
 
@@ -109,13 +118,14 @@
             </article>
           </div>
         </div>
+      </section>
 
+      <section id="web-works">
         <div class="section-panel">
           <div class="section-head">
             <div>
               <span class="eyebrow">Works</span>
               <h2>Web Works</h2>
-              <p>最新の2〜3件だけトップに出して、一覧や詳細に繋ぐ構成</p>
             </div>
             <a class="more-link" href="web-works.html">MORE ↗</a>
           </div>
@@ -123,9 +133,12 @@
           <div class="work-grid">
             <article class="work-card">
               <span class="work-type">受託制作</span>
-              <h3>あわら市防災士の会 申し込みフォーム</h3>
+              <h3>あわら市防災士の会 防災教室イベント申し込みフォーム</h3>
               <p>
-                Google Apps Script と Google Sheets を使い、イベント申し込み受付と管理ができる仕組みを制作。
+                あわら市防災士の会様向けに、イベント申し込み受付フォームと管理用の仕組みを制作。<
+                Google Apps Script と Google Sheets を活用し、
+                受付・定員管理・通知導線を整備。
+                運用負担を軽減できる仕組みを構築しました。
               </p>
               <div class="tags">
                 <span class="tag">GAS</span>
@@ -133,7 +146,7 @@
                 <span class="tag">フォーム運用</span>
               </div>
               <div class="card-links">
-                <a class="text-link" href="awara-bousai.html">詳細を見る ↗</a>
+                <a class="text-link" href="https://script.google.com/macros/s/AKfycbxy6Vq-DiOUvz3WGg1R77XnImt8lG23-0TQEcLBVWOz1OU3ozCABBiy3XsG9ScbVJclqQ/exec">詳細を見る ↗</a>
               </div>
             </article>
 
@@ -160,38 +173,53 @@
             </article>
           </div>
         </div>
+      </section>
 
+      <section id="illustration-works">
         <div class="section-panel">
           <div class="section-head">
             <div>
               <span class="eyebrow">Works</span>
               <h2>Illustration Works</h2>
-              <p>SDイラストなどを2〜3件だけ見せて、ギャラリーページへ送る構成</p>
             </div>
             <a class="more-link" href="illustration-works.html">MORE ↗</a>
           </div>
 
           <div class="work-grid">
             <article class="work-card">
-              <span class="work-type">SDイラスト</span>
-              <h3>SD Gallery 01</h3>
+              <span class="work-type">ミニキャライラスト</span>
+
+              <img src="illustrationWorks/kiisansukasi.png" alt="久遠季生様" class="work-image">
+              <h3>Birthday Gift Illustration</h3>
               <p>
-                ここにSDイラストのサムネイルやサンプル画像を入れる想定。完成後は画像付きカードに差し替え可能。
+                翠仙望様よりご依頼いただき、ライバー様のお誕生日お祝い色紙用として制作。
+                贈り物としての用途を意識し、表情やポーズをやわらかく明るい雰囲気で仕上げました。
               </p>
               <div class="tags">
-                <span class="tag">SD</span>
-                <span class="tag">Sample</span>
+                <span class="tag">chibi</span>
+                <span class="tag">Illustration</span>
               </div>
             </article>
 
             <article class="work-card">
-              <span class="work-type">SDイラスト</span>
-              <h3>SD Gallery 02</h3>
+              <span class="work-type">ミニキャライラスト</span>
+
+              <div class="image-row">
+                <img src="illustrationWorks/sorasansukasi.png">
+                <img src="illustrationWorks/sorasansukasi2.png">
+
+              </div>
+
+              <h3> Gallery 02</h3>
               <p>
-                依頼で描いた作品やサンプル立ち絵を並べる枠。まずは2〜3件だけ置くとトップがすっきり見える。
+                ライバー様よりご依頼いただき制作したミニキャライラスト。
+                IRIAM用（600×600）および配信・グッズ用（2000×2000）の2サイズに対応し、
+                表情差分も含めて制作。
+                商用利用を前提とした用途を想定し、明るく優しい印象で仕上げました。
+                表情差分（通常／寂しい）
               </p>
-              <div class="tags">
-                <span class="tag">Commission</span>
+              <div class="tags">chibi</span>
+                <span class="tag">ミニキャライラスト</span>
               </div>
             </article>
 
@@ -258,7 +286,7 @@
                 <li>静的Webページ</li>
                 <li>申し込みフォーム / 管理導線</li>
                 <li>個人開発ツールのUI設計・実装</li>
-                <li>SDイラスト / 立ち絵系制作</li>
+                <li>イラスト / 立ち絵系制作</li>
               </ul>
             </article>
 
@@ -281,7 +309,7 @@
             <div>
               <span class="eyebrow">Links</span>
               <h2>活動リンク</h2>
-              <p>X / Twitch / YouTube への導線。必要なら今後ご依頼導線も追加可能。</p>
+              <p>必要なら…今後ご依頼導線も追加可能。</p>
             </div>
           </div>
 
@@ -291,15 +319,17 @@
               <p>配信・創作・開発の更新、告知、進捗まとめ。</p>
             </a>
 
-            <a class="link-card" href="#" target="_blank" rel="noopener noreferrer">
-              <h3>Twitch</h3>
-              <p>ゲーム配信や活動のメイン導線。リンク差し替え待ち。</p>
+            <a class="link-card" href="https://www.youtube.com/@Guinness_Noir" target="_blank" rel="noopener noreferrer">
+              <h3>YouTube</h3>
+              <p>主に動画、切り抜き・アーカイブ置き場の予定。</p>
             </a>
 
-            <a class="link-card" href="#" target="_blank" rel="noopener noreferrer">
-              <h3>YouTube</h3>
-              <p>アーカイブ、動画、切り抜き置き場として育てる予定。リンク差し替え待ち。</p>
+            <a class="link-card" href="https://www.twitch.tv/guinness_n" target="_blank" rel="noopener noreferrer">
+              <h3>Twitch</h3>
+              <p>ゲーム配信用に。しかし…しばらくは活動停止…。</p>
             </a>
+
+            
           </div>
         </div>
       </div>
