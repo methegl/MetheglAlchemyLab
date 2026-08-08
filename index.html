@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>メセグル錬金工房 | Portfolio</title>
-  <link rel="icon" type="image/png" href="MAL_Logo/favicon.png">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,22 +12,22 @@
   <header class="site-header">
     <div class="site-header-inner">
       <div class="brand">
-        <a href="#top">
+        <a>
           <img src="MAL_Logo/Methegl_logo_line_200.png" alt="メセグル錬金工房ロゴ">
         </a>
       </div>
       <nav class="nav">
         <a href="#top">Top</a>
         <a href="#alchemy">Alchemy Projects</a>
-        <a href="#stream">Stream</a>
         <a href="#web-works">Web Works</a>
         <a href="#illustration-works">Illustration</a>
+        <a href="#stream">Stream</a>
         <a href="#about">About me</a>
     </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -46,9 +45,9 @@
             <a class="button primary" href="#alchemy">Alchemy Projectsへ</a>
 
             <div class="sub-buttons">
-              <a class="button" href="#stream">Stream</a>
               <a class="button" href="#web-works">Web Works</a>
               <a class="button" href="#illustration-works">Illustration</a>
+              <a class="button" href="#stream">Stream</a>
               <a class="button" href="#about">About me</a>
             </div>
           </div>
@@ -69,7 +68,6 @@
             </a>
           </p>
         </div>
-      </div>
       </div>
     </section>
 
@@ -108,44 +106,24 @@
               </div>
             </article>
 
-          </div>
-        </div>
-      </section>
-
-      <section id="stream">
-        <div class="container">
-          <div class="section-panel stream-panel">
-            <div class="section-head">
-              <div>
-                <span class="eyebrow">Stream</span>
-                <h2>配信記録</h2>
-                <p>ゲーム、創作、歌、観測ショート。工房で行う実験と観測の記録。</p>
+            <article class="work-card">
+              <span class="work-type">制作途中</span>
+              <h3>デイリークエストアプリ</h3>
+              <p>
+                日常タスクをクエスト化して管理する自己管理アプリ。
+                ログやレベルアップ要素を組み込みながら制作していたが、現在はJQGに集中するため一旦停止中。
+              </p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">構想整理中</span>
               </div>
-            </div>
-
-            <article class="stream-card">
-              <a class="stream-thumbnail" href="https://youtu.be/18dsQNj4BYA" target="_blank" rel="noopener noreferrer" aria-label="【工房一般公開】メセグル錬金工房へようこそ。をYouTubeで見る">
-                <img src="https://i.ytimg.com/vi/18dsQNj4BYA/maxresdefault.jpg" alt="【工房一般公開】メセグル錬金工房へようこそ。｜ギネス・ノワールのサムネイル">
-                <span class="stream-signal">8.14 RELEASE</span>
-                <span class="stream-mark">▶</span>
-                <p>METHEGL<br>ALCHEMY LABORATORY</p>
-              </a>
-
-              <div class="stream-info">
-                <span class="work-type">UPCOMING VIDEO</span>
-                <p class="stream-date">2026.08.14 0:00 一般公開</p>
-                <h3>【工房一般公開】メセグル錬金工房へようこそ。｜ギネス・ノワール</h3>
-                <p>
-                  メセグル錬金工房の新しい観測記録を、8月14日に一般公開します。
-                  公開前でもYouTubeの動画ページを確認できます。
-                </p>
-                <div class="tags">
-                  <span class="tag">YouTube</span>
-                  <span class="tag">Upcoming</span>
-                  <span class="tag">New Video</span>
-                </div>
-                <a class="button primary stream-button" href="https://youtu.be/18dsQNj4BYA" target="_blank" rel="noopener noreferrer">公開予定動画を見る ↗</a>
+              <div class="card-links">
+                <a class="text-link" href="https://methegl.github.io/daily-quest-app/" target="_blank" rel="noopener noreferrer">試作ページを見る ↗</a>
+                <a class="text-link" href="daily-quest.html">詳細を見る ↗</a>
               </div>
+              <p class="status-note">※ ポートフォリオ上では「制作途中作品」として掲載</p>
             </article>
           </div>
         </div>
@@ -166,7 +144,7 @@
               <span class="work-type">受託制作</span>
               <h3>あわら市防災士の会 防災教室イベント申し込みフォーム</h3>
               <p>
-                あわら市防災士の会様向けに、イベント申し込み受付フォームと管理用の仕組みを制作。
+                あわら市防災士の会様向けに、イベント申し込み受付フォームと管理用の仕組みを制作。<
                 Google Apps Script と Google Sheets を活用し、
                 受付・定員管理・通知導線を整備。
                 運用負担を軽減できる仕組みを構築しました。
@@ -182,19 +160,13 @@
             </article>
 
             <article class="work-card">
-              <span class="work-type">イベントページ</span>
-              <h3>あわら市防災士の会・親子防災クッキング</h3>
+              <span class="work-type">掲載予定</span>
+              <h3>Web Works 02</h3>
               <p>
-                親子防災クッキングの案内をまとめたWebページ。
-                イベントの内容を確認し、申し込みへ進めるように制作しました。
+                今後ここに、直近のWeb制作実績を追加予定。トップは見やすさを優先して代表例のみ掲載。
               </p>
               <div class="tags">
-                <span class="tag">GAS</span>
-                <span class="tag">イベント案内</span>
-                <span class="tag">申し込み導線</span>
-              </div>
-              <div class="card-links">
-                <a class="text-link" href="https://script.google.com/macros/s/AKfycbwkUHdiQV8gez7awkiI-tEn4gxyP5A91wyq4Vk77EgvDs8YWm2V2fBSZa5jYkpD1Sbs1g/exec" target="_blank" rel="noopener noreferrer">ページを見る ↗</a>
+                <span class="tag">coming soon</span>
               </div>
             </article>
 
@@ -255,8 +227,7 @@
                 商用利用を前提とした用途を想定し、明るく優しい印象で仕上げました。
                 表情差分（通常／寂しい）
               </p>
-              <div class="tags">
-                <span class="tag">chibi</span>
+              <div class="tags">chibi</span>
                 <span class="tag">ミニキャライラスト</span>
               </div>
             </article>
@@ -273,7 +244,46 @@
             </article>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+
+    <section id="stream">
+      <div class="container">
+        <div class="section-panel stream-panel">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Stream</span>
+              <h2>配信記録</h2>
+              <p>ゲーム、創作、歌、観測ショート。工房で行う実験と観測の記録。</p>
+            </div>
+          </div>
+
+          <article class="stream-card">
+            <div class="stream-thumbnail" aria-hidden="true">
+              <span class="stream-signal">ON AIR</span>
+              <span class="stream-mark">▶</span>
+              <p>METHEGL<br>ALCHEMY LABORATORY</p>
+            </div>
+
+            <div class="stream-info">
+              <span class="work-type">NEXT STREAM</span>
+              <p class="stream-date">配信日時は YouTube でお知らせ</p>
+              <h3>次回の観測記録</h3>
+              <p>
+                メセグル錬金工房から、ゲームや創作を中心に配信中。
+                次回の内容と待機所はYouTubeで案内します。
+              </p>
+              <div class="tags">
+                <span class="tag">YouTube</span>
+                <span class="tag">Game</span>
+                <span class="tag">Creative</span>
+              </div>
+              <a class="button primary stream-button is-disabled" href="#" aria-disabled="true">YouTubeで見る ↗</a>
+              <!-- YouTubeチャンネルURLが決まったら、上の href と aria-disabled / is-disabled を差し替える -->
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section id="about">
@@ -324,7 +334,7 @@
                 <li>静的Webページ</li>
                 <li>申し込みフォーム / 管理導線</li>
                 <li>個人開発ツールのUI設計・実装</li>
-                <li>イラスト / ちびキャラ系制作</li>
+                <li>イラスト / ちびキャラ系・アイコン系制作</li>
               </ul>
             </article>
 
