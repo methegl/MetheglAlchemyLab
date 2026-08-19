@@ -26,6 +26,9 @@
       height: 60px;   /* ←ここでサイズ調整 */
       width: auto;
       display: block;
+      filter:
+        drop-shadow(0 2px 5px rgba(0, 0, 0, 0.65))
+        drop-shadow(0 0 8px rgba(201, 162, 74, 0.16));
     }
 
     body {
