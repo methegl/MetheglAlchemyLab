@@ -1,0 +1,35 @@
+name: Update featured stream
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-featured-stream
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+
+      - name: Read the latest YouTube status
+        run: python3 tools/update_stream.py
+
+      - name: Publish changed stream data
+        run: |
+          if git diff --quiet -- stream-data.json; then
+            echo "No stream change detected."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stream-data.json
+          git commit -m "Update featured YouTube stream"
+          git push

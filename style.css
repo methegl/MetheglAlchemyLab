@@ -569,6 +569,11 @@
       letter-spacing: 0.12em;
     }
 
+    .stream-card.is-live .stream-signal {
+      background: #e33c53;
+      box-shadow: 0 0 18px rgba(227, 60, 83, 0.7);
+    }
+
     .stream-mark {
       position: relative;
       z-index: 1;
