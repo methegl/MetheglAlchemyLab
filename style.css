@@ -686,3 +686,25 @@
         bottom: 22px;
       }
     }
+.marshmallow-area {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 2px;
+  font-size: 13px;
+}
+
+.marshmallow-label {
+  color: var(--subtle);
+}
+
+.marshmallow-link {
+  color: var(--gold);
+  transition: opacity 0.2s ease;
+}
+
+.marshmallow-link:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
