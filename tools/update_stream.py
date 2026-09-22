@@ -231,10 +231,7 @@ def latest_item(
 
 
 def current_feature() -> dict:
-    # ----------------------------------
-    # 1. LIVE NOW always wins
-    # ----------------------------------
-
+    # 1. 現在配信中を確認
     home_lockups = find_lockups(
         fetch_initial_data("")
     )
@@ -249,55 +246,55 @@ def current_feature() -> dict:
     )
 
     if active_live:
+        print("=== LIVE LOCKUP ===")
+        print(
+            json.dumps(
+                active_live,
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return video_data(active_live, "live")
+
+    # 2. 最新通常動画
+    video_lockups = find_lockups(
+        fetch_initial_data("/videos")
+    )
+
+    # 3. 最新配信アーカイブ
+    stream_lockups = find_lockups(
+        fetch_initial_data("/streams")
+    )
+
+    print("=== LATEST VIDEO LOCKUP ===")
+    if video_lockups:
+        print(
+            json.dumps(
+                video_lockups[0],
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+
+    print("=== LATEST STREAM LOCKUP ===")
+    if stream_lockups:
+        print(
+            json.dumps(
+                stream_lockups[0],
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+
+    # デバッグ中なので一旦通常動画を返す
+    if video_lockups:
         return video_data(
-            active_live,
-            "live",
+            video_lockups[0],
+            "video",
         )
-
-    # ----------------------------------
-    # 2. Latest regular video
-    # ----------------------------------
-
-    latest_video = latest_item(
-        "/videos",
-        "video",
-    )
-
-    # ----------------------------------
-    # 3. Latest completed stream
-    # ----------------------------------
-
-    latest_archive = latest_item(
-        "/streams",
-        "archive",
-    )
-
-    # ----------------------------------
-    # 4. Compare them
-    # ----------------------------------
-
-    if latest_video and latest_archive:
-        video_data_result, video_date = (
-            latest_video
-        )
-
-        archive_data_result, archive_date = (
-            latest_archive
-        )
-
-        if archive_date > video_date:
-            return archive_data_result
-
-        return video_data_result
-
-    if latest_archive:
-        return latest_archive[0]
-
-    if latest_video:
-        return latest_video[0]
 
     raise RuntimeError(
-        "No videos or stream archives were found"
+        "No regular videos were found"
     )
 
 
