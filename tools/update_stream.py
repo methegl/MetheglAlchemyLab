@@ -77,33 +77,31 @@ def video_title(lockup: dict) -> str:
 
 
 def is_live_now(lockup: dict) -> bool:
-    """
-    現在本当に配信中の動画だけを判定する。
-    配信アーカイブや待機枠は除外する。
-    """
     serialized = json.dumps(lockup, ensure_ascii=False).upper()
 
-    # 待機枠は除外
-    upcoming_markers = (
-        "UPCOMING",
-        "配信予定",
-        "公開予定",
-    )
-
-    if any(marker in serialized for marker in upcoming_markers):
-        return False
-
-    # 「現在配信中」を明示する強いマーカーだけ使用
-    live_now_markers = (
+    live_markers = (
         "BADGE_STYLE_TYPE_LIVE_NOW",
         "LIVE NOW",
         "ライブ配信中",
     )
 
-    return any(
-        marker in serialized
-        for marker in live_now_markers
-    )
+    matched = [
+        marker
+        for marker in live_markers
+        if marker in serialized
+    ]
+
+    if matched:
+        print(
+            f"LIVE判定: {video_title(lockup)}",
+            file=sys.stderr,
+        )
+        print(
+            f"一致したマーカー: {matched}",
+            file=sys.stderr,
+        )
+
+    return bool(matched)
 
 
 def get_publish_date(video_id: str) -> datetime:
