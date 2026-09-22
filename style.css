@@ -761,3 +761,55 @@
   color: #f1da95;
   font-size: 13px;
 }
+
+/* ========================================
+   Stream - Support
+======================================== */
+
+.stream-support-area {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.stream-support-head h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: #f7f1e0;
+}
+
+.stream-support-head p {
+  margin: 0;
+  color: var(--subtle);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.stream-support-button {
+  margin-top: 18px;
+}
+
+
+/* ========================================
+   Stream - Archive
+======================================== */
+
+.stream-card.is-archive .stream-signal {
+  letter-spacing: 0.08em;
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 640px) {
+  .stream-support-head p br {
+    display: none;
+  }
+
+  .stream-support-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
