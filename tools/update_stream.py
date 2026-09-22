@@ -78,24 +78,31 @@ def video_title(lockup: dict) -> str:
 
 def is_live_now(lockup: dict) -> bool:
     """
-    Waiting rooms use UPCOMING badges.
-    Only actual live-now markers trigger a switch.
+    現在本当に配信中の動画だけを判定する。
+    配信アーカイブや待機枠は除外する。
     """
-    serialized = json.dumps(
-        lockup,
-        ensure_ascii=False,
-    ).upper()
+    serialized = json.dumps(lockup, ensure_ascii=False).upper()
 
-    live_markers = (
+    # 待機枠は除外
+    upcoming_markers = (
+        "UPCOMING",
+        "配信予定",
+        "公開予定",
+    )
+
+    if any(marker in serialized for marker in upcoming_markers):
+        return False
+
+    # 「現在配信中」を明示する強いマーカーだけ使用
+    live_now_markers = (
         "BADGE_STYLE_TYPE_LIVE_NOW",
-        "THUMBNAIL_OVERLAY_BADGE_STYLE_LIVE",
         "LIVE NOW",
         "ライブ配信中",
     )
 
     return any(
         marker in serialized
-        for marker in live_markers
+        for marker in live_now_markers
     )
 
 
