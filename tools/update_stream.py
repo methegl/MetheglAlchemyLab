@@ -18,6 +18,9 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 
+class YouTubeFetchError(RuntimeError):
+    pass
+
 
 def fetch_initial_data(path: str) -> dict:
     request = Request(
@@ -34,7 +37,7 @@ def fetch_initial_data(path: str) -> dict:
     )
 
     if not match:
-        raise RuntimeError(
+        raise YouTubeFetchError(
             f"YouTube data was not found at {path or '/'}"
         )
 
@@ -369,6 +372,20 @@ def main() -> int:
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
+
+    except YouTubeFetchError as error:
+        print(
+            f"YouTube data temporarily unavailable: "
+            f"{error}",
+            file=sys.stderr,
+        )
+
+        print(
+            "Keeping the existing stream-data.json "
+            "and trying again on the next scheduled run."
+        )
+
+        raise SystemExit(0)
 
     except Exception as error:
         print(
